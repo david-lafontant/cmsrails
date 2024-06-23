@@ -1,14 +1,44 @@
+<div class="container">
+<div class="row">
+<div class="col">
 <p style="color: green"><%= notice %></p>
 
 <h1>Pages</h1>
 
 <div id="pages">
-  <% @pages.each do |page| %>
-    <%= render page %>
-    <p>
-      <%= link_to "Show this page", admin_page_path(page) %>
-    </p>
-  <% end %>
-</div>
 
+
+
+
+
+  <% @pages.each do |page| %>
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+
+
+      <%= render page %>
+      <p>
+        <%= link_to "Show this page", admin_page_path(page) %>
+      </p>
+
+      </div>
+    </div>
+
+  <% end %>
+
+
+
+
+
+
+
+
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col">
 <%= link_to "New page", new_admin_page_path %>
+</div>
+</div>
+</div>

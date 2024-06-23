@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
 
   def index
-  @pages = Page.all.where(:slug => "")
+  @pages = Page.all.where.not(:slug => "")
   end
 
   def show

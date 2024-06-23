@@ -1,12 +1,23 @@
+
+<div class="container">
+<div class="row">
+<div class="col">
+
+<%if notice %>
 <p style="color: green"><%= notice %></p>
+<%end%>
 
 <%= render @page %>
 
 <div>
-  <%= link_to "Edit this page", edit_admin_page_path(@page) %> |
-  <%= link_to "Back to pages", admin_pages_path %>
+<div class="btn-group mb-2">
+  <%= link_to "Edit this page", edit_admin_page_path(@page) , :class=> "btn btn-outline-warning" %>
+  <%= link_to "Back to pages", admin_pages_path , :class=> "btn btn-outline-primary" %>
+</div>
+  <%= button_to "Destroy this page", admin_page_path(@page), method: :delete, :class=>"btn btn-danger" %>
 
-  <%= button_to "Destroy this page", admin_page_path(@page), method: :delete %>
 
-
+</div>
+</div>
+</div>
 </div>
